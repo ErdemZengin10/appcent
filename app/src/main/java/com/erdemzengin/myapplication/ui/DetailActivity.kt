@@ -21,13 +21,41 @@ class DetailActivity : AppCompatActivity() {
         date_time_arv.setText(dateTime_arv)
         date_time_dep.setText(dateTime_dep)
         flight_edit.setText(flightModel?.fligt_number?.number)
-        terminal_edit.setText(flightModel?.departure?.terminal)
-        if(flightModel?.departure?.delay!=null){
-            delay_edit.setText(flightModel?.departure?.delay!!)
+
+        var flight_number_bigtext :String? = flightModel?.fligt_number?.flight_icao+" "+"Flight Details"
+
+
+        flight_icao_bigtext.setText(flight_number_bigtext)
+
+
+
+
+
+
+        if(flightModel?.departure?.terminal==null){
+            terminal_edit.setText("?")
         }else{
-            delay_edit.setText("0")
+            terminal_edit.setText(flightModel?.departure?.terminal)
         }
-        gate_edit.setText(flightModel?.departure?.gate)
+
+
+
+
+
+        if(flightModel?.departure?.delay==null){
+             delay_edit.setText("0")
+        }else{
+            delay_edit.setText(flightModel?.departure?.delay!!)
+        }
+
+        if(flightModel?.departure?.gate==null){
+            gate_edit.setText("?")
+
+        }else{
+            gate_edit.setText(flightModel?.departure?.gate)
+        }
+
+
 
 
 

@@ -14,6 +14,7 @@ class rvAdapter(val flightList:List<FlightModel>,private val listener:Listener):
     private var green=0
     private var yellow=1
     private var red=2
+    private var landed=3
 
 
     class ViewHolderGreen(view: View):RecyclerView.ViewHolder(view){
@@ -48,7 +49,7 @@ class rvAdapter(val flightList:List<FlightModel>,private val listener:Listener):
 
 
 
-            havayoluText.setText(item.airline.name)
+            havayoluText.setText(item.airline?.name)
             kalkisText.setText(final_string_arv)
             varisText.setText((final_string_dep))
         }
@@ -84,7 +85,7 @@ class rvAdapter(val flightList:List<FlightModel>,private val listener:Listener):
                 delayText.setText(delay.toString())
             }
 
-            havayoluText.setText(item.airline.name)
+            havayoluText.setText(item.airline?.name)
             kalkisText.setText(final_string_dep)
             varisText.setText((final_string_arv))
 
@@ -127,7 +128,7 @@ class rvAdapter(val flightList:List<FlightModel>,private val listener:Listener):
             }
 
 
-            havayoluText.setText(item.airline.name)
+            havayoluText.setText(item.airline?.name)
             kalkisText.setText(final_string_dep)
             varisText.setText((final_string_arv))
 

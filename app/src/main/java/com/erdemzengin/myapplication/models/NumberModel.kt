@@ -6,7 +6,9 @@ import java.io.Serializable
 data class NumberModel(
 
     @SerializedName("number")
-    var number:String
+    var number:String?,
+    @SerializedName("icao")
+    var flight_icao:String?
 
 
 

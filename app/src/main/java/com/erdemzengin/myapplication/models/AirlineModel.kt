@@ -6,7 +6,7 @@ import java.io.Serializable
 data class AirlineModel(
 
     @SerializedName("name")
-    var name:String,
+    var name:String?,
     @SerializedName("icao")
     var icao:String?
 

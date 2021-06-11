@@ -5,7 +5,7 @@ import java.io.Serializable
 
 data class DepartureModel(
     @SerializedName("airport")
-    var airport:String,
+    var airport:String?,
     @SerializedName("icao")
     var icao:String?,
     @SerializedName("estimated")

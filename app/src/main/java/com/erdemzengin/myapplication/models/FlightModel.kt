@@ -11,13 +11,13 @@ data class FlightModel(
     @SerializedName("departure")
     var departure: DepartureModel?,
     @SerializedName("arrival")
-    var arrival:  ArrivalModel,
+    var arrival:  ArrivalModel?,
     @SerializedName("airline")
-    var airline: AirlineModel,
+    var airline: AirlineModel?,
     @SerializedName("flight_status")
-    var flight_status: String,
+    var flight_status: String?,
     @SerializedName("flight")
-    var fligt_number: NumberModel
+    var fligt_number: NumberModel?
 
 
 ):Serializable
